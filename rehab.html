@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Find the best rehabilitation centers across India. Browse our curated list of trusted rehab centers offering alcohol de-addiction, drug rehabilitation, and mental wellness programs." />
+    <meta name="keywords"
+        content="rehab centers India, addiction treatment, alcohol de-addiction, drug rehabilitation, mental wellness, recovery centers" />
+    <meta name="robots" content="index, follow" />
+    <title>Rehab Centers | RehabCare India</title>
+
+    <link rel="canonical" href="https://rehabcare.in/rehab.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Extra styles to match your theme but for professional listing */
+        .rehab-page-header {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: #f8fafc;
+        }
+
+        .rehab-page-header h1 {
+            font-size: 42px;
+            color: #1b4332;
+            margin-bottom: 10px;
+        }
+
+        .rehab-page-header p {
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        /* Filter Row - replacing Search Bar */
+        .filter-row {
+            max-width: 1100px;
+            margin: 20px auto 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .filter-select {
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            font-family: inherit;
+            color: #475569;
+            min-width: 200px;
+            outline: none;
+        }
+
+        /* Detailed Card Design */
+        .rehab-list-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        .rehab-full-card {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            border: 1px solid #f1f5f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rehab-full-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .rehab-card-img {
+            flex: 1;
+            min-width: 400px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+            overflow: hidden;
+        }
+
+        .rehab-full-card:hover .rehab-card-img {
+            transform: scale(1.05);
+        }
+
+        .rehab-card-info {
+            flex: 1.2;
+            padding: 40px;
+        }
+
+        .location-tag {
+            color: #c5a358;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .rehab-card-info h2 {
+            font-size: 28px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .rehab-card-info p {
+            color: #64748b;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .facility-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .f-pill {
+            background: #f1f5f9;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-inquire {
+            background: #1b4332;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-inquire:hover {
+            background: #2d5a45;
+            box-shadow: 0 0 20px rgba(27, 67, 50, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-details {
+            border: 1px solid #1b4332;
+            color: #1b4332;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-details:hover {
+            background: #1b4332;
+            color: white;
+            box-shadow: 0 0 20px rgba(27, 67, 50, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 900px) {
+            .rehab-full-card {
+                flex-direction: column;
+            }
+
+            .rehab-card-img {
+                min-width: 100%;
+                height: 250px;
+            }
+        }
+
+        /* Mobile Responsive - Full width buttons */
+        @media (max-width: 600px) {
+            .rehab-card-info {
+                padding: 25px;
+            }
+
+            .rehab-card-info h2 {
+                font-size: 22px;
+            }
+
+            .card-buttons {
+                flex-direction: column;
+            }
+
+            .btn-inquire,
+            .btn-details {
+                width: 100%;
+                text-align: center;
+                padding: 14px 20px;
+            }
+
+            .rehab-page-header h1 {
+                font-size: 32px;
+            }
+
+            .filter-select {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+
+        /* =========================================
+           CONTACT MODAL STYLES
+           ========================================= */
+
+        /* Modal Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Modal Container */
+        .modal-container {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(20px) scale(0.95);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Modal Header */
+        .modal-header {
+            padding: 25px 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 22px;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .modal-close {
+            background: #f1f5f9;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            color: #64748b;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            padding: 20px 25px 25px;
+        }
+
+        /* Center Badge in Modal */
+        .modal-center-badge {
+            background: #f0fdf4;
+            color: #1b4332;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .modal-center-badge i {
+            color: #1b4332;
+        }
+
+        /* Form Styles */
+        .modal-form .form-group {
+            margin-bottom: 18px;
+        }
+
+        .modal-form label {
+            display: block;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .modal-form input,
+        .modal-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .modal-form input:focus,
+        .modal-form textarea:focus {
+            outline: none;
+            border-color: #1b4332;
+            box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+        }
+
+        .modal-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .modal-form input::placeholder,
+        .modal-form textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .btn-modal-submit {
+            width: 100%;
+            background: #1b4332;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-modal-submit:hover {
+            background: #2d5a45;
+            box-shadow: 0 0 20px rgba(27, 67, 50, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Success Message */
+        .modal-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .modal-success.active {
+            display: block;
+        }
+
+        .modal-success i {
+            font-size: 60px;
+            color: #22c55e;
+            margin-bottom: 20px;
+        }
+
+        .modal-success h4 {
+            font-size: 24px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .modal-success p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .btn-modal-close {
+            background: #1b4332;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-modal-close:hover {
+            background: #2d5a45;
+        }
+
+        /* Hide form when success shows */
+        .modal-form.hidden {
+            display: none;
+        }
+
+        /* =========================================
+           FILTER BUTTONS STYLES
+           ========================================= */
+
+        /* Search Button */
+        .btn-search {
+            background: #1b4332;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-search:hover {
+            background: #2d5a45;
+            box-shadow: 0 0 20px rgba(27, 67, 50, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Reset Button */
+        .btn-reset {
+            background: transparent;
+            color: #64748b;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-reset:hover {
+            background: #f1f5f9;
+            color: #1b4332;
+            border-color: #1b4332;
+        }
+
+        /* No Results Message */
+        .no-results-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        .no-results-message i {
+            font-size: 48px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .no-results-message p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Visually hidden class for accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 900px) {
+            .filter-row {
+                gap: 15px;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-search,
+            .btn-reset {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="RehabCare Logo - Yoga and Wellness" class="logo">
+                <span>Rehab</span>Care
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="rehab-page-header">
+            <h1>Trusted Rehab Centers</h1>
+            <p>Find the best path to recovery in a city near you.</p>
+        </section>
+
+        <div class="filter-row">
+            <label for="cityFilter" class="visually-hidden">Filter by City</label>
+            <select id="cityFilter" class="filter-select" aria-label="Filter by City">
+                <option value="">Filter by City</option>
+                <option value="Rishikesh">Rishikesh</option>
+                <option value="Goa">Goa</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+            </select>
+
+            <label for="treatmentFilter" class="visually-hidden">Filter by Treatment Type</label>
+            <select id="treatmentFilter" class="filter-select" aria-label="Filter by Treatment Type">
+                <option value="">Treatment Type</option>
+                <option value="Alcohol De-addiction">Alcohol De-addiction</option>
+                <option value="Drug Rehabilitation">Drug Rehabilitation</option>
+                <option value="Mental Wellness">Mental Wellness</option>
+                <option value="Luxury Retreat">Luxury Retreat</option>
+            </select>
+
+            <button type="button" id="searchBtn" class="btn-search" aria-label="Search rehab centers">
+                <i class="fas fa-search"></i> Search
+            </button>
+
+            <button type="button" id="resetBtn" class="btn-reset" aria-label="Reset filters">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResultsMessage" class="no-results-message" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>No rehab centers found matching your criteria.</p>
+        </div>
+
+        <section class="rehab-list-container" id="rehab-cards-container">
+
+        </section>
+    </main>
+
+    <!-- =========================================
+         CONTACT MODAL
+         ========================================= -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-container">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h3>Contact Center</h3>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Center Badge -->
+                <div class="modal-center-badge">
+                    <i class="fas fa-building"></i>
+                    <span id="modalCenterName">Loading...</span>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="modal-form" id="modalContactForm">
+                    <input type="hidden" id="modalCenterSlug" value="">
+
+                    <div class="form-group">
+                        <label for="modalName">Your Name *</label>
+                        <input type="text" id="modalName" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalPhone">Phone Number *</label>
+                        <input type="tel" id="modalPhone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalEmail">Email Address *</label>
+                        <input type="email" id="modalEmail" name="email" placeholder="Enter your email address"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modalMessage">Message</label>
+                        <textarea id="modalMessage" name="message" placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-modal-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div class="modal-success" id="modalSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Message Sent!</h4>
+                    <p>Thank you for contacting us. We will reach out to you shortly.</p>
+                    <button type="button" class="btn-modal-close" id="successClose">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="lux-container">
+            <div class="footer-top-info">
+                <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                    overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is a
+                    collective effort, featuring trusted centres from nearly every state in the country. The platform
+                    also includes a blog section with news, trends, and personal stories, aimed at educating,
+                    motivating, and inspiring both those struggling with addiction and those who wish to assist them on
+                    their path to recovery.</p>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-column about">
+                    <div class="footer-logo">
+                        <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                        <span>Rehab <b>Care</b></span>
+                    </div>
+                    <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you with
+                        the best rehabilitation centers across India for a healthier tomorrow.</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Main Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rehab.html">Rehab Centers</a></li>
+                        <li><a href="resources.html">Recovery Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Therapy Sessions</a></li>
+                        <li><a href="prevention.html">Suicide Prevention</a></li>
+                        <li><a href="#">Submit a Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rehab-centers-data.js"></script>
+    <script src="rehab-script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Support | You Matter | RehabCare</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Specific page styling for better look */
+        .emergency-btn {
+            background: #dc2626;
+            color: white !important;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+        }
+        .emergency-btn:hover {
+            transform: translateY(-3px);
+            background: #b91c1c;
+        }
+        .helpline-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .helpline-card:hover {
+            border-color: #dc2626;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .step-box {
+            text-align: center;
+            padding: 20px;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #dc2626;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Resources</a>
+                <a href="prevention.html" style="color: #dc2626;"><b>Emergency Help</b></a>
+                <a href="booking.html" class="cta">Get Help</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 120px 20px; text-align: center;">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                <span style="color: #dc2626; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">You are not alone</span>
+                <h1 style="font-size: 56px; color: #0f172a; margin: 20px 0; line-height: 1.1;">Please, stay with us.</h1>
+                <p style="font-size: 20px; color: #475569; margin-bottom: 40px;">
+                    This moment is heavy, but it's just a moment. There are people ready to listen to you right now without any judgment.
+                </p>
+                <a href="tel:9152987821" class="emergency-btn">
+                    <i class="fas fa-phone-alt"></i> Call 9152-9878-21
+                </a>
+                <p style="margin-top: 20px; color: #64748b;">(Available 24/7 • Free • Confidential)</p>
+            </div>
+        </section>
+
+        <section style="padding: 100px 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                    
+                    <div class="helpline-card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3 style="color: #1e293b; font-size: 24px;">Vandrevala Foundation</h3>
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                        </div>
+                        <p style="margin: 15px 0; color: #64748b;">Best for immediate crisis intervention and multilingual support.</p>
+                        <a href="tel:9999666555" style="font-size: 22px; font-weight: 700; color: #dc2626; text-decoration: none;">+91 9999 666 555</a>
+                    </div>
+
+                    <div class="helpline-card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3 style="color: #1e293b; font-size: 24px;">iCall (TISS)</h3>
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                        </div>
+                        <p style="margin: 15px 0; color: #64748b;">Professional counseling by TISS. Available Monday to Saturday.</p>
+                        <a href="tel:02225521111" style="font-size: 22px; font-weight: 700; color: #dc2626; text-decoration: none;">022-25521111</a>
+                    </div>
+
+                    <div class="helpline-card">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <h3 style="color: #1e293b; font-size: 24px;">AASRA Helpline</h3>
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                        </div>
+                        <p style="margin: 15px 0; color: #64748b;">Dedicated to suicide prevention and emotional support 24/7.</p>
+                        <a href="tel:9820466726" style="font-size: 22px; font-weight: 700; color: #dc2626; text-decoration: none;">+91 98204 66726</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #0f172a; color: white; padding: 100px 0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 60px; color: white;">What to do right now?</h2>
+                
+                
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                    <div class="step-box">
+                        <div class="step-number">1</div>
+                        <h4 style="color: white;">Pause</h4>
+                        <p style="color: #94a3b8;">Promise yourself to wait just 24 hours. Don't act on these feelings today.</p>
+                    </div>
+                    <div class="step-box">
+                        <div class="step-number">2</div>
+                        <h4 style="color: white;">Safety</h4>
+                        <p style="color: #94a3b8;">Move away from anything dangerous. Go to a room with people or a public place.</p>
+                    </div>
+                    <div class="step-box">
+                        <div class="step-number">3</div>
+                        <h4 style="color: white;">Breathe</h4>
+                        <p style="color: #94a3b8;">Focus only on your breath. Inhale for 4 seconds, hold for 7, exhale for 8.</p>
+                    </div>
+                    <div class="step-box">
+                        <div class="step-number">4</div>
+                        <h4 style="color: white;">Talk</h4>
+                        <p style="color: #94a3b8;">Call one of the numbers above. Just say "I'm not okay, I need to talk."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+   <footer class="main-footer">
+    <div class="lux-container">
+        <div class="footer-top-info">
+            <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is a collective effort, featuring trusted centres from nearly every state in the country. The platform also includes a blog section with news, trends, and personal stories, aimed at educating, motivating, and inspiring both those struggling with addiction and those who wish to assist them on their path to recovery.</p>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-column about">
+                <div class="footer-logo">
+                    <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                    <span>Rehab <b>Care</b></span>
+                </div>
+                <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you with the best rehabilitation centers across India for a healthier tomorrow.</p>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Main Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="rehab.html">Rehab Centers</a></li>
+                    <li><a href="resources.html">Recovery Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Therapy Sessions</a></li>
+                    <li><a href="prevention.html">Suicide Prevention</a></li>
+                    <li><a href="#">Submit a Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

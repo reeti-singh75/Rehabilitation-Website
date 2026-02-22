@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <title>Blog & Success Stories | RehabCare</title>
+
+    <link rel="canonical" href="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            padding: 100px 20px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 15px 20px;
+        }
+
+        .breadcrumb-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb a {
+            color: #1b4332;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 10px;
+        }
+
+        /* Center Navigation */
+        .center-nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .center-nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 0 20px;
+        }
+
+        .center-nav a {
+            color: #64748b;
+            text-decoration: none;
+            padding: 15px 0;
+            font-weight: 500;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .center-nav a:hover,
+        .center-nav a.active {
+            color: #1b4332;
+            border-bottom-color: #1b4332;
+        }
+
+        /* Main Content */
+        .blog-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .blog-section {
+            margin-bottom: 60px;
+        }
+
+        .blog-section h2 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .blog-section h2 i {
+            color: #1b4332;
+        }
+
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #1b4332;
+        }
+
+        .article-category {
+            background: #f0fdf4;
+            color: #1b4332;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .blog-card h3 {
+            color: #1e293b;
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-card>p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .article-date {
+            color: #94a3b8;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Success Stories */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .story-content {
+            margin-bottom: 20px;
+        }
+
+        .story-content i {
+            font-size: 24px;
+            color: #1b4332;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .story-content p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .story-author {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        .story-author strong {
+            color: #1e293b;
+            display: block;
+        }
+
+        .story-author span {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* Recovery Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-item:hover {
+            background: #f0fdf4;
+        }
+
+        .tip-item i {
+            font-size: 20px;
+            color: #1b4332;
+            margin-top: 2px;
+        }
+
+        .tip-item span {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .blog-cta {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .blog-cta h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .blog-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #7fffd4;
+            color: #1b4332;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background: #5fe5c4;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 80px 20px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .center-nav {
+                top: 60px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Blog & Success Stories</h1>
+        <p id="center-name">Loading...</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="home.html">Home</a><span>/</span>
+            <a href="rehab.html">Rehab Centers</a><span>/</span>
+            <a href="#">Blog</a>
+        </div>
+    </nav>
+
+    <!-- Center Navigation -->
+    <nav class="center-nav">
+        <div class="center-nav-container">
+            <a href="#" id="nav-details">Overview</a>
+            <a href="#" id="nav-programs">Programs</a>
+            <a href="#" id="nav-therapy">Therapy</a>
+            <a href="#" id="nav-facilities">Facilities</a>
+            <a href="#" id="nav-blog" class="active">Blog & Stories</a>
+            <a href="#" id="nav-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="blog-content">
+        <!-- Articles -->
+        <section class="blog-section">
+            <h2><i class="fas fa-newspaper"></i> Latest Articles</h2>
+            <div class="articles-grid" id="articles">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="blog-section">
+            <h2><i class="fas fa-trophy"></i> Success Stories</h2>
+            <div class="stories-grid" id="success-stories">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Recovery Tips -->
+        <section class="blog-section">
+            <h2><i class="fas fa-lightbulb"></i> Recovery Tips</h2>
+            <div class="tips-grid" id="recovery-tips">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="blog-cta">
+            <h3>Share Your Story</h3>
+            <p>Your journey can inspire others to seek help and start their recovery.</p>
+            <a href="#" id="cta-contact" class="btn-cta">Contact Us</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="lux-container">
+            <div class="footer-top-info">
+                <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                    overcoming addiction.</p>
+            </div>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Main Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="rehab.html">Rehab Centers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rehab-centers-data.js"></script>
+    <script src="rehab-script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

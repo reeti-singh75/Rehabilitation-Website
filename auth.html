@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        ========================================
+        REHABCARE AUTHENTICATION PAGE
+        ========================================
+        A beautiful login/signup page for RehabCare
+        Connects with the backend API at localhost:3000
+    -->
+
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Login or Sign Up to RehabCare - Your trusted platform for finding rehabilitation centers and treatment programs across India.">
+    <meta name="keywords" content="RehabCare, login, signup, rehabilitation, addiction treatment, recovery centers">
+    <meta name="author" content="RehabCare">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Login or Sign Up | RehabCare">
+    <meta property="og:description"
+        content="Your trusted platform for finding rehabilitation centers and treatment programs across India.">
+    <meta property="og:type" content="website">
+
+    <!-- Title -->
+    <title>Login or Sign Up | RehabCare</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts - Poppin (matching existing site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <!-- 
+        ========================================
+        MAIN AUTHENTICATION CONTAINER
+        ========================================
+        Split layout: Left (welcome) + Right (form)
+    -->
+    <div class="auth-container">
+
+        <!-- LEFT SECTION - Welcome Content -->
+        <div class="auth-left">
+            <div class="welcome-content">
+                <!-- Logo -->
+                <div class="auth-logo">
+                    <img src="Images/yoga.avif" alt="RehabCare Logo" class="logo-img">
+                    <span>Rehab<span class="highlight">Care</span></span>
+                </div>
+
+                <!-- Welcome Text -->
+                <h1 class="welcome-title">Welcome to RehabCare</h1>
+                <p class="welcome-subtitle">Your journey to recovery starts here</p>
+
+                <!-- Features List -->
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Connect with top-rated rehabilitation centers</li>
+                    <li><i class="fas fa-check-circle"></i> Confidential consultation and support</li>
+                    <li><i class="fas fa-check-circle"></i> Expert guidance for addiction recovery</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 helpline support</li>
+                </ul>
+
+                <!-- Decorative Quote -->
+                <blockquote class="welcome-quote">
+                    "Recovery is not a race. You don't have to feel guilty if it takes you longer than you thought it
+                    would."
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- RIGHT SECTION - Login/Signup Form -->
+        <div class="auth-right">
+            <div class="form-card">
+                <!-- Toggle Tabs -->
+                <div class="toggle-tabs">
+                    <button class="toggle-btn active" data-tab="login" id="loginTab">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                    <button class="toggle-btn" data-tab="signup" id="signupTab">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                    <!-- Animated Slider -->
+                    <div class="toggle-slider" id="toggleSlider"></div>
+                </div>
+
+                <!-- Alert Messages Container -->
+                <div id="alertContainer"></div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="auth-form active">
+                    <h2 class="form-title">Welcome Back!</h2>
+                    <p class="form-subtitle">Login to continue your journey</p>
+
+                    <!-- Email Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="loginEmail" name="email" placeholder="Email Address" required
+                                autocomplete="email">
+                        </div>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required
+                                autocomplete="current-password">
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('loginPassword', 'loginToggleIcon')">
+                                <i class="fas fa-eye" id="loginToggleIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Forgot Password Link -->
+                    <div class="form-footer">
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="loginBtn">
+                        <span class="btn-text">Login</span>
+                        <span class="btn-loader"></span>
+                    </button>
+
+                    <!-- Switch to Signup -->
+                    <p class="switch-form">
+                        Don't have an account?
+                        <button type="button" class="switch-btn" onclick="switchTab('signup')">Sign Up</button>
+                    </p>
+                </form>
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm" class="auth-form">
+                    <h2 class="form-title">Create Account</h2>
+                    <p class="form-subtitle">Join RehabCare today</p>
+
+                    <!-- Name Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" id="signupName" name="name" placeholder="Full Name" required
+                                autocomplete="name">
+                        </div>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="signupEmail" name="email" placeholder="Email Address" required
+                                autocomplete="email">
+                        </div>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="signupPassword" name="password"
+                                placeholder="Password (min 6 characters)" required minlength="6"
+                                autocomplete="new-password">
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('signupPassword', 'signupToggleIcon')">
+                                <i class="fas fa-eye" id="signupToggleIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password Input -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="signupConfirmPassword" name="confirmPassword"
+                                placeholder="Confirm Password" required minlength="6" autocomplete="new-password">
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('signupConfirmPassword', 'confirmToggleIcon')">
+                                <i class="fas fa-eye" id="confirmToggleIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="signupBtn">
+                        <span class="btn-text">Create Account</span>
+                        <span class="btn-loader"></span>
+                    </button>
+
+                    <!-- Switch to Login -->
+                    <p class="switch-form">
+                        Already have an account?
+                        <button type="button" class="switch-btn" onclick="switchTab('login')">Login</button>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Back to Home -->
+            <a href="home.html" class="back-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="auth.js"></script>
+</body>
+
+</html>

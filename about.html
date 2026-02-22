@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Our Mission & Vision | RehabCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .about-content {
+            padding: 80px 10%;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .about-section {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image-side {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image-side img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-section h2 {
+            color: #1e293b;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Value Cards */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #6366f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehabs.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>Empowering Your Journey to Wellness</h1>
+            <p>Connecting individuals with the best rehabilitation and mental health care in India.</p>
+        </div>
+    </section>
+
+    <main class="about-content">
+        
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Our Story & Purpose</h2>
+                <p>
+                    RehabCare ki shuruaat ek simple vision ke saath hui thi: addiction aur mental health issues se lad rahe logo ko ek sahi aur bharosemand rasta dikhana. India mein rehab centers ki sankhya bohot hai, lekin ek trustworthy aur transparent platform ki hamesha kami rahi hai.
+                </p>
+                <p>
+                    Humne dekha ki kai parivar sahi jankari na hone ki wajah se galat centers ka chunaav kar lete hain. Isliye, RehabCare ek aise bridge ke roop mein kaam karta hai jo aapko desh ke sabse top-rated aur verified recovery centers se jodta hai.
+                </p>
+            </div>
+            <div class="about-image-side">
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5310f94f17?w=600" alt="Consultation">
+            </div>
+        </div>
+
+        
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-heart" style="font-size: 2rem; color: #6366f1;"></i>
+                    <h4>Empathy</h4>
+                    <p>Hum har mareez ki takleef ko apni takleef samajhte hain.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #6366f1;"></i>
+                    <h4>Trust</h4>
+                    <p>Verified centers aur transparent data hamari pehchan hai.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-star" style="font-size: 2rem; color: #6366f1;"></i>
+                    <h4>Excellence</h4>
+                    <p>Sirf best quality medical treatment ko promote karna.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section" style="flex-direction: row-reverse;">
+            <div class="about-text">
+                <h2>A Commitment to Quality Care</h2>
+                <p>
+                    Hum sirf ek directory nahi hain; hum quality care ke liye committed hain. Hamari team har ek listed center ko verify karti hai—unke treatment methods, medical staff expertise, aur patient success rates ko check karne ke baad hi hum unhe apne platform par jagah dete hain.
+                </p>
+                <p>
+                    Hum samajhte hain ki recovery ek sensitive process hai, isliye humara focus sirf "luxury" par nahi, balki "healing" par hota hai. Hum ensure karte hain ki har patient ko unki zarurat ke hisaab se best option mile.
+                </p>
+            </div>
+            <div class="about-image-side">
+                <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=600" alt="Healthcare Support">
+            </div>
+        </div>
+
+        
+
+        <div class="about-section" style="display: block; text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2>Our Future Vision</h2>
+            <p>
+                Aane wale saalo mein RehabCare ka sapna hai ki India ke har ek kone tak professional recovery support pahunche. Hum lagatar technology aur empathy ko milakar apne platform ko improve kar rahe hain. Humara vision hai ek aisa addiction-free India banana jaha har nagrik ko mental wellness aur recovery ka barabar mauka mile.
+            </p>
+        </div>
+
+    </main>
+
+  
+   <footer class="main-footer">
+    <div class="lux-container">
+        <div class="footer-top-info">
+            <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is a collective effort, featuring trusted centres from nearly every state in the country. The platform also includes a blog section with news, trends, and personal stories, aimed at educating, motivating, and inspiring both those struggling with addiction and those who wish to assist them on their path to recovery.</p>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-column about">
+                <div class="footer-logo">
+                    <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                    <span>Rehab <b>Care</b></span>
+                </div>
+                <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you with the best rehabilitation centers across India for a healthier tomorrow.</p>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Main Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rehab.html">Rehab Centers</a></li>
+                    <li><a href="resources.html">Recovery Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Therapy Sessions</a></li>
+                    <li><a href="prevention.html">Suicide Prevention</a></li>
+                    <li><a href="#">Submit a Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

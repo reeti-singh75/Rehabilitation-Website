@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprehensive Recovery Resources | RehabCare India</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Resource Page Specific Custom Styles */
+        .res-hero {
+            background: linear-gradient(45deg, #0f172a, #1e293b);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .resource-section-wrapper {
+            padding: 80px 5%;
+            background: #ffffff;
+        }
+
+        .res-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .res-feature-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .res-image-box {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .res-image-box img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+        }
+
+        .res-content-box {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .res-content-box h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .res-content-box h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #6366f1;
+            margin-top: 10px;
+        }
+
+        .res-content-box p {
+            font-size: 17px;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .res-tag {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .res-feature-item, .res-feature-item:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .res-image-box { min-width: 100%; }
+            .res-image-box img { height: 300px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                 <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="res-hero">
+            <div class="container">
+                <h1 style="color:white; font-size: 3.5rem;">Knowledge is the First Step to Recovery</h1>
+                <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">
+                    Our comprehensive resource library provides the scientific, emotional, and community tools needed to navigate the complex journey of rehabilitation and mental wellness.
+                </p>
+            </div>
+        </section>
+
+        <section class="resource-section-wrapper">
+            <div class="container">
+
+                <div class="res-feature-item">
+                    <div class="res-image-box">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800" alt="Brain Science">
+                    </div>
+                    <div class="res-content-box">
+                        <span class="res-tag">Scientific Literature</span>
+                        <h2>Understanding the Addicted Brain</h2>
+                        <p>
+                            Addiction is a complex brain disorder characterized by compulsive substance seeking and use. It fundamentally alters the brain's reward system, affecting areas responsible for judgment, decision-making, and memory. Our literature explains how prolonged substance use hijacks the dopamine pathways, making it increasingly difficult for individuals to feel pleasure from normal activities. 
+                        </p>
+                        <p>
+                            By understanding the neurobiology of dependency, patients and families can view recovery as a medical process rather than a failure of willpower. We offer detailed guides on how neuroplasticity allows the brain to heal and rewire itself during long-term sobriety.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="res-feature-item">
+                    <div class="res-image-box">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800" alt="Family Care">
+                    </div>
+                    <div class="res-content-box">
+                        <span class="res-tag">Community & Support</span>
+                        <h2>The Family Support System</h2>
+                        <p>
+                            Recovery does not happen in a vacuum; it is deeply influenced by the home environment. Family engagement is one of the strongest predictors of successful long-term recovery. Our resources help families navigate the thin line between supporting a loved one and enabling their addiction.
+                        </p>
+                        <p>
+                            We provide literature on "Family Systems Theory," which helps households heal together. Understanding boundaries, improving communication, and addressing co-dependency are essential steps in creating a stable foundation for the recovering individual to thrive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="res-feature-item">
+                    <div class="res-image-box">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800" alt="Meditation and Yoga">
+                    </div>
+                    <div class="res-content-box">
+                        <span class="res-tag">Holistic Wellness</span>
+                        <h2>Yoga and Mindfulness in Recovery</h2>
+                        <p>
+                            Modern rehabilitation often combines traditional medical treatment with holistic practices. Mindfulness-Based Relapse Prevention (MBRP) is a clinical approach that uses meditation to help individuals observe their cravings without acting on them. 
+                        </p>
+                        <p>
+                            Yoga and somatic therapy help restore the physical body, which is often neglected during active addiction. Our guides explain how physical movement helps regulate the nervous system, reducing the chronic stress and anxiety that often lead to relapse.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="res-feature-item">
+                    <div class="res-image-box">
+                        <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=800" alt="Path to Success">
+                    </div>
+                    <div class="res-content-box">
+                        <span class="res-tag">Expert Strategy</span>
+                        <h2>Relapse Prevention & Crisis Management</h2>
+                        <p>
+                            Relapse is a process, not an event. It starts weeks or months before the actual use of a substance. Our literature provides a roadmap for identifying the early warning signs—emotional and mental—before they manifest physically.
+                        </p>
+                        <p>
+                            We offer practical "Urge Surfing" techniques and crisis management plans. Having a written relapse prevention plan is a vital tool for anyone in early recovery, providing a clear set of actions to take when faced with high-risk social situations or emotional triggers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="res-feature-item">
+                    <div class="res-image-box">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" alt="Group Discussion">
+                    </div>
+                    <div class="res-content-box">
+                        <span class="res-tag">Social Reintegration</span>
+                        <h2>The Power of Peer Support Groups</h2>
+                        <p>
+                            Connection is the opposite of addiction. Peer support groups like AA, NA, and SMART Recovery offer a judgment-free zone where individuals can share their struggles and successes. Engagement with a community of people who have walked the same path reduces the profound sense of isolation that often accompanies addiction.
+                        </p>
+                        <p>
+                            This section explores different community models, from the spiritual focus of the 12-Step programs to the cognitive-behavioral approach of modern support groups, helping you find the right community for your personal beliefs.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+   
+   <footer class="main-footer">
+    <div class="lux-container">
+        <div class="footer-top-info">
+            <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is a collective effort, featuring trusted centres from nearly every state in the country. The platform also includes a blog section with news, trends, and personal stories, aimed at educating, motivating, and inspiring both those struggling with addiction and those who wish to assist them on their path to recovery.</p>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-column about">
+                <div class="footer-logo">
+                    <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                    <span>Rehab <b>Care</b></span>
+                </div>
+                <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you with the best rehabilitation centers across India for a healthier tomorrow.</p>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Main Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="rehab.html">Rehab Centers</a></li>
+                    <li><a href="resources.html">Recovery Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Therapy Sessions</a></li>
+                    <li><a href="prevention.html">Suicide Prevention</a></li>
+                    <li><a href="#">Submit a Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

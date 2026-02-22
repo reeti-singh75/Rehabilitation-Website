@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <title>Therapy & Treatment | RehabCare</title>
+
+    <link rel="canonical" href="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            padding: 100px 20px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 15px 20px;
+        }
+
+        .breadcrumb-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb a {
+            color: #1b4332;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 10px;
+        }
+
+        /* Center Navigation */
+        .center-nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .center-nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 0 20px;
+        }
+
+        .center-nav a {
+            color: #64748b;
+            text-decoration: none;
+            padding: 15px 0;
+            font-weight: 500;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .center-nav a:hover,
+        .center-nav a.active {
+            color: #1b4332;
+            border-bottom-color: #1b4332;
+        }
+
+        /* Main Content */
+        .therapy-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .therapy-section {
+            margin-bottom: 60px;
+        }
+
+        .therapy-section h2 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .therapy-section h2 i {
+            color: #1b4332;
+        }
+
+        /* Therapy Methods Grid */
+        .therapy-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .therapy-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .therapy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #1b4332;
+        }
+
+        .therapy-card i {
+            font-size: 36px;
+            color: #1b4332;
+            margin-bottom: 15px;
+        }
+
+        .therapy-card h4 {
+            color: #1e293b;
+            font-size: 16px;
+        }
+
+        /* Counseling & Medical Lists */
+        .info-list {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .counseling-item,
+        .medical-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .counseling-item:last-child,
+        .medical-item:last-child {
+            border-bottom: none;
+        }
+
+        .counseling-item i,
+        .medical-item i {
+            color: #10b981;
+            font-size: 18px;
+        }
+
+        .counseling-item span,
+        .medical-item span {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .therapy-cta {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .therapy-cta h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .therapy-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #7fffd4;
+            color: #1b4332;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background: #5fe5c4;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 80px 20px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .center-nav {
+                top: 60px;
+            }
+
+            .therapy-section h2 {
+                font-size: 22px;
+            }
+
+            .therapy-methods-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Therapy & Treatment</h1>
+        <p id="center-name">Loading...</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="home.html">Home</a><span>/</span>
+            <a href="rehab.html">Rehab Centers</a><span>/</span>
+            <a href="#">Therapy</a>
+        </div>
+    </nav>
+
+    <!-- Center Navigation -->
+    <nav class="center-nav">
+        <div class="center-nav-container">
+            <a href="#" id="nav-details">Overview</a>
+            <a href="#" id="nav-programs">Programs</a>
+            <a href="#" id="nav-therapy" class="active">Therapy</a>
+            <a href="#" id="nav-facilities">Facilities</a>
+            <a href="#" id="nav-blog">Blog & Stories</a>
+            <a href="#" id="nav-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="therapy-content">
+        <!-- Treatment Methods -->
+        <section class="therapy-section">
+            <h2><i class="fas fa-heartbeat"></i> Treatment Methods</h2>
+            <div class="therapy-methods-grid" id="therapy-methods">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Counseling Types -->
+        <section class="therapy-section">
+            <h2><i class="fas fa-users"></i> Counseling Services</h2>
+            <div class="info-list" id="counseling-types">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Medical Support -->
+        <section class="therapy-section">
+            <h2><i class="fas fa-user-md"></i> Medical Support</h2>
+            <div class="info-list" id="medical-support">
+                <!-- Dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="therapy-cta">
+            <h3>Begin Your Recovery Journey Today</h3>
+            <p>Our expert team is ready to support you through every step.</p>
+            <a href="#" id="cta-contact" class="btn-cta">Get Started</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="lux-container">
+            <div class="footer-top-info">
+                <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                    overcoming addiction.</p>
+            </div>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Main Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="rehab.html">Rehab Centers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rehab-centers-data.js"></script>
+    <script src="rehab-script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

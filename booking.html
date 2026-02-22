@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Consultation | RehabCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Booking Page specific styling */
+        .booking-page-wrapper {
+            padding: 120px 5% 80px;
+            background: #f8fafc;
+        }
+
+        .booking-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .booking-info h1 {
+            font-size: 2.5rem;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .benefit-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .booking-form-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #a855f7;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main class="booking-page-wrapper">
+        <div class="booking-container">
+            <div class="booking-info">
+                <h1>Take the First Step to Your Recovery</h1>
+                <p style="color: #64748b; font-size: 1.2rem; line-height: 1.6;">
+                    Choosing the right rehab can be overwhelming. Our care coordinators provide free, confidential
+                    guidance to help you find the best fit for your needs.
+                </p>
+
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 100% Confidential Consultation</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Free Professional Assessment</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Connection to Top-Rated Centers</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Response within 2 Hours</li>
+                </ul>
+
+                <div style="margin-top: 40px; padding: 20px; background: #eef2ff; border-radius: 15px;">
+                    <p style="margin: 0; font-weight: 600; color: #4338ca;">
+                        <i class="fas fa-phone-alt"></i> Emergency Helpline: +91 98765 43210
+                    </p>
+                </div>
+            </div>
+
+            <div class="booking-form-card">
+                <form id="contactForm" onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="userName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="userPhone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Looking for Treatment in?</label>
+                        <select id="userCity">
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                            <option>Bangalore</option>
+                            <option>Pune</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type of Addiction/Support</label>
+                        <select id="treatmentType">
+                            <option>Alcohol De-addiction</option>
+                            <option>Drug Rehabilitation</option>
+                            <option>Mental Wellness</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message (Optional)</label>
+                        <textarea id="userMsg" rows="3" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry Now</button>
+                </form>
+                <div id="formSuccess"
+                    style="display:none; color: #16a34a; margin-top: 15px; font-weight: 600; text-align: center;">
+                    <i class="fas fa-check-circle"></i> Thank you! Our coordinator will call you shortly.
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="main-footer">
+        <div class="lux-container">
+            <div class="footer-top-info">
+                <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                    overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is a
+                    collective effort, featuring trusted centres from nearly every state in the country. The platform
+                    also includes a blog section with news, trends, and personal stories, aimed at educating,
+                    motivating, and inspiring both those struggling with addiction and those who wish to assist them on
+                    their path to recovery.</p>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-column about">
+                    <div class="footer-logo">
+                        <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                        <span>Rehab <b>Care</b></span>
+                    </div>
+                    <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you with
+                        the best rehabilitation centers across India for a healthier tomorrow.</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Main Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rehab.html">Rehab Centers</a></li>
+                        <li><a href="resources.html">Recovery Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Therapy Sessions</a></li>
+                        <li><a href="prevention.html">Suicide Prevention</a></li>
+                        <li><a href="#">Submit a Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+
+        // API Base URL - Update this to match your backend server
+        const API_BASE_URL = 'http://localhost:3000/api';
+
+        async function handleBooking(event) {
+            event.preventDefault();
+
+            // Get form values
+            const userName = document.getElementById('userName').value;
+            const userPhone = document.getElementById('userPhone').value;
+            const userCity = document.getElementById('userCity').value;
+            const treatmentType = document.getElementById('treatmentType').value;
+            const userMsg = document.getElementById('userMsg').value;
+
+            // Prepare data for backend
+            const contactData = {
+                name: userName,
+                email: userName.toLowerCase().replace(/\s+/g, '.') + '@placeholder.com', // Generate placeholder email if not provided
+                phone: userPhone,
+                message: userMsg,
+                centerName: 'General Inquiry',
+                city: userCity,
+                treatmentType: treatmentType
+            };
+
+            // Show loading state
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                // Send data to backend
+                const response = await fetch(`${API_BASE_URL}/contact/submit`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(contactData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Hide form and show success message
+                    document.getElementById("contactForm").style.display = "none";
+                    document.getElementById("formSuccess").style.display = "block";
+                    console.log('Booking submitted successfully!', result);
+                } else {
+                    // Show error message
+                    alert('Error: ' + result.message);
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Network error. Please make sure the backend server is running.');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <title>Treatment Programs | RehabCare</title>
+
+    <link rel="canonical" href="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="white.css" />
+    <style>
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            padding: 100px 20px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 15px 20px;
+        }
+
+        .breadcrumb-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb a {
+            color: #1b4332;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 10px;
+        }
+
+        /* Center Navigation */
+        .center-nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+
+        .center-nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 0 20px;
+        }
+
+        .center-nav a {
+            color: #64748b;
+            text-decoration: none;
+            padding: 15px 0;
+            font-weight: 500;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .center-nav a:hover,
+        .center-nav a.active {
+            color: #1b4332;
+            border-bottom-color: #1b4332;
+        }
+
+        /* Main Content */
+        .programs-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #1b4332;
+        }
+
+        .program-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .program-header h3 {
+            color: #1e293b;
+            font-size: 20px;
+            flex: 1;
+        }
+
+        .program-duration {
+            background: #f1f5f9;
+            color: #1b4332;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .program-duration i {
+            margin-right: 5px;
+        }
+
+        .program-card>p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .program-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .feature-tag {
+            background: #f0fdf4;
+            color: #1b4332;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .feature-tag i {
+            color: #10b981;
+        }
+
+        .btn-inquire {
+            display: inline-block;
+            background: #1b4332;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-inquire:hover {
+            background: #2d5a45;
+        }
+
+        /* CTA Section */
+        .programs-cta {
+            background: #f8fafc;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+
+        .programs-cta h3 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .programs-cta p {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 80px 20px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .center-nav {
+                top: 60px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Treatment Programs</h1>
+        <p id="center-name">Loading...</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="home.html">Home</a><span>/</span>
+            <a href="rehab.html">Rehab Centers</a><span>/</span>
+            <a href="#">Programs</a>
+        </div>
+    </nav>
+
+    <!-- Center Navigation -->
+    <nav class="center-nav">
+        <div class="center-nav-container">
+            <a href="#" id="nav-details">Overview</a>
+            <a href="#" id="nav-programs" class="active">Programs</a>
+            <a href="#" id="nav-therapy">Therapy</a>
+            <a href="#" id="nav-facilities">Facilities</a>
+            <a href="#" id="nav-blog">Blog & Stories</a>
+            <a href="#" id="nav-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="programs-content">
+        <div class="programs-grid" id="programs-container">
+            <!-- Dynamically loaded programs -->
+        </div>
+
+        <!-- CTA Section -->
+        <section class="programs-cta">
+            <h3>Need Help Choosing a Program?</h3>
+            <p>Our team can help you find the right treatment option for your needs.</p>
+            <a href="#" id="cta-contact" class="btn-inquire">Contact Us Today</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="lux-container">
+            <div class="footer-top-info">
+                <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                    overcoming addiction.</p>
+            </div>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Main Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="rehab.html">Rehab Centers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rehab-centers-data.js"></script>
+    <script src="rehab-script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

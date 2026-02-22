@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="white.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="nav-wrapper">
+        <div class="nav-container">
+
+            <div class="brand">
+                <img src="Images/yoga.avif" alt="RehabCare Logo" class="logo">
+                <span>Rehab</span>Care
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="rehab.html">Rehab Centers</a>
+                <a href="resources.html">Recovery Resource</a>
+                <a href="prevention.html">Suicide Prevention</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" class="cta">Book Now</a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+
+                <div class="hero-text">
+                    <h1>
+                        Find a Rehab that is Right for You or a Loved One.
+                    </h1>
+                    <p>
+                        Search trusted addiction and mental health rehabilitation centers across India.
+                    </p>
+
+                    <div class="hero-search">
+                        <input id="searchInput" type="text" placeholder="Search by name or city..." />
+                        <button onclick="searchFromAPI()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+
+                    <!-- Search Results Section -->
+                    <div id="searchResults" class="search-results" style="display: none;">
+                        <div class="search-results-header">
+                            <h3>Search Results</h3>
+                            <button onclick="closeSearchResults()" class="close-search">&times;</button>
+                        </div>
+                        <div id="searchResultsContent" class="search-results-content"></div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="Images/logo.png" alt="Yoga Therapy">
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="lux-wrapper">
+            <div class="lux-hero">
+                <div class="lux-container">
+                    <h1>Luxury Rehab Centers in India</h1>
+                    <p>Experience Healing with World-Class Amenities, Privacy & Expert Care</p>
+                </div>
+
+            </div>
+
+            <section class="lux-rehab-section lux-container">
+                <div class="lux-grid" id="lux-rehabGrid">
+                </div>
+            </section>
+
+            <div id="lux-detailOverlay" class="lux-overlay">
+                <div class="lux-modal">
+                    <span class="lux-close-btn" onclick="closeLuxDetails()">&times;</span>
+                    <div id="lux-modalContent"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="filter-navigation" id="filter-nav"
+            style="background: #f8fafc; padding: 60px 0 20px; text-align: center;">
+            <div class="lux-container">
+                <div class="filter-intro" style="margin-bottom: 30px;">
+                    <h2 style="color: #1a4d44; font-size: 32px; font-weight: 700;">Explore Our Healthcare Network</h2>
+                    <p style="color: #64748b; font-size: 18px; max-width: 700px; margin: 10px auto;">
+                        Find the best verified facilities tailored to your specific recovery needs.
+                    </p>
+                </div>
+
+                <div class="btn-group-wrapper"
+                    style="display: inline-flex; gap: 15px; background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <button class="tab-btn active" onclick="toggleView('rehab', this)">
+                        <i class="fas fa-hand-holding-heart"></i> Rehabs
+                    </button>
+                    <button class="tab-btn" onclick="toggleView('hosp', this)">
+                        <i class="fas fa-hospital"></i> Hospitals
+                    </button>
+                    <button class="tab-btn" onclick="toggleView('clinic', this)">
+                        <i class="fas fa-stethoscope"></i> Clinics
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-wrapper">
+            <div class="lux-container">
+                <div class="section-title">
+                    <h2>Trusted Top-Rated Rehab Centers</h2>
+                    <p>Centers with the highest recovery rates and patient satisfaction.</p>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="trust-grid" id="trust-rehabGrid">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="hosp-wrapper" style="padding: 60px 0; background: #fff;">
+            <div class="lux-container">
+                <div class="section-title" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="font-size: 36px; color: #0f172a;">Top-Rated Trusted Hospitals</h2>
+                    <p style="color: #64748b; font-size: 18px;">Leading multi-speciality hospitals across India with
+                        world-class medical facilities.</p>
+                    <div class="underline" style="width: 100px; height: 4px; background: #10b981; margin: 20px auto;">
+                    </div>
+                </div>
+
+                <div class="hosp-grid" id="hosp-grid">
+                    <div class="browse-card" style="text-align: left; padding: 25px;">
+                        <div class="browse-icon" style="background: #ecfdf5; color: #10b981;">
+                            <i class="fas fa-hospital-symbol"></i>
+                        </div>
+                        <h3 style="margin-top: 15px;">AIIMS, New Delhi</h3>
+                        <p>Ranked #6 Globally in 2026. Known for excellence in psychiatric care, trauma, and
+                            research-driven treatments.</p>
+                        <span class="count-tag" style="background: #10b981;">Govt. Trusted</span>
+                    </div>
+
+                    <div class="browse-card" style="text-align: left; padding: 25px;">
+                        <div class="browse-icon" style="background: #eff6ff; color: #3b82f6;">
+                            <i class="fas fa-hand-holding-medical"></i>
+                        </div>
+                        <h3 style="margin-top: 15px;">Medanta - The Medicity</h3>
+                        <p>Gurugram. India's top-rated private hospital with advanced neurosciences and psychiatric
+                            departments.</p>
+                        <span class="count-tag" style="background: #3b82f6;">Private Excellence</span>
+                    </div>
+
+                    <div class="browse-card" style="text-align: left; padding: 25px;">
+                        <div class="browse-icon" style="background: #fff7ed; color: #f59e0b;">
+                            <i class="fas fa-clinic-medical"></i>
+                        </div>
+                        <h3 style="margin-top: 15px;">Apollo Hospitals</h3>
+                        <p>Chennai & Mumbai. World-class multi-speciality care with a strong focus on mental wellness
+                            and neurology.</p>
+                        <span class="count-tag" style="background: #f59e0b;">JCI Accredited</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <section class="container"
+            style="padding: 40px 20px; background: #f8fafc; border-radius: 20px; margin-bottom: 50px;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h3 style="color: #1e293b;">Why choose these hospitals?</h3>
+                <p style="color: #475569; line-height: 1.6;">These institutions are selected based on their 2026 global
+                    rankings, patient safety protocols, and availability of specialized psychiatric and rehabilitation
+                    wings. They offer 24/7 emergency support and advanced diagnostic tools.</p>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="clinic-wrapper">
+            <div class="lux-container">
+                <div class="section-title">
+                    <h2>Trusted Specialized Clinics</h2>
+                    <p>Expert diagnostic and consultation services for personalized healthcare.</p>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="clinic-grid" id="clinic-grid">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="browse-wrapper">
+            <div class="lux-container">
+                <div class="section-title">
+                    <h2>Browse the Best Centres Near You</h2>
+                    <p>Select a category to find the most trusted healthcare facilities in your city.</p>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="browse-grid">
+                    <a href="#rehab-section" class="browse-card">
+                        <div class="browse-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Rehab Centers</h3>
+                        <p>Luxury & Trusted recovery spaces for a better tomorrow.</p>
+                        <span class="count-tag">50+ Centres</span>
+                    </a>
+
+                    <a href="#hosp-section" class="browse-card">
+                        <div class="browse-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Multi-Speciality Hospitals</h3>
+                        <p>World-class medical care and 24/7 emergency services.</p>
+                        <span class="count-tag">120+ Facilities</span>
+                    </a>
+
+                    <a href="#clinic-section" class="browse-card">
+                        <div class="browse-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Specialized Clinics</h3>
+                        <p>Expert consultants for dental, skin, and mental wellness.</p>
+                        <span class="count-tag">200+ Clinics</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="treatment-section">
+            <div class="lux-container treatment-flex">
+
+                <div class="treatment-image-grid">
+                    <div class="leaf-img img-1">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500" alt="Family Care">
+                    </div>
+                    <div class="leaf-img img-2">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500" alt="Support">
+                    </div>
+                    <div class="leaf-img img-3">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500" alt="Healing">
+                    </div>
+                </div>
+
+                <div class="treatment-content">
+                    <div class="treatment-header">
+                        <h2>Top Treatment Options</h2>
+                        <p>We have over 500 centres that specifically cater to the needs of the client’s family while in
+                            treatment.</p>
+                    </div>
+
+                    <div class="treatment-pills">
+                        <div class="pill">12 Step</div>
+                        <div class="pill">Ayurveda Treatment</div>
+                        <div class="pill">Detoxification</div>
+                        <div class="pill">Luxury</div>
+                        <div class="pill">Out Patient</div>
+                        <div class="pill active">International</div>
+                        <div class="pill">Smoking Cessation</div>
+                        <div class="pill">Women's Program</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="center-header">
+                    <h2>Our Blogs</h2>
+                    <p>Explore stories, insights, and expert articles on addiction and recovery.</p>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500" alt="Bullying">
+                        <div class="blog-body">
+                            <small>Rajnandini Rathod • Feb 6, 2026</small>
+                            <h4>Is My Child Being Bullied at School?</h4>
+                            <p>Many parents worry about their child's safety at school but not always in obvious ways...
+                            </p>
+                            <a href="#">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500" alt="Boundaries">
+                        <div class="blog-body">
+                            <small>Rajnandini Rathod • Jan 30, 2026</small>
+                            <h4>Emotional Boundaries: How to Express</h4>
+                            <p>Have you ever agreed to something you didn't want to do and felt drained?</p>
+                            <a href="#">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=500" alt="Depression">
+                        <div class="blog-body">
+                            <small>Rajnandini Rathod • Jan 28, 2026</small>
+                            <h4>What is High-Functioning Depression?</h4>
+                            <p>When people think of depression, they often imagine someone who looks visibly
+                                distressed...
+                            </p>
+                            <a href="#">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="main-footer">
+            <div class="lux-container">
+                <div class="footer-top-info">
+                    <p><strong>Rehab Care</strong> exists to support individuals across India in their journey towards
+                        overcoming addiction. Our comprehensive directory of Drug and Alcohol Rehabilitation Centres is
+                        a collective effort, featuring trusted centres from nearly every state in the country. The
+                        platform also includes a blog section with news, trends, and personal stories, aimed at
+                        educating, motivating, and inspiring both those struggling with addiction and those who wish to
+                        assist them on their path to recovery.</p>
+                </div>
+
+                <div class="footer-container">
+                    <div class="footer-column about">
+                        <div class="footer-logo">
+                            <img src="Images/yoga.avif" alt="Rehab Care Logo">
+                            <span>Rehab <b>Care</b></span>
+                        </div>
+                        <p class="footer-tagline">Helping individuals find the right path to recovery. We connect you
+                            with the best rehabilitation centers across India for a healthier tomorrow.</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Main Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rehab.html">Rehab Centers</a></li>
+                            <li><a href="resources.html">Recovery Resources</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Therapy Sessions</a></li>
+                            <li><a href="prevention.html">Suicide Prevention</a></li>
+                            <li><a href="#">Submit a Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column contact-info">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> support@rehabcare.in</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>RehabCare.in &copy; 2026 | All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    </main>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
