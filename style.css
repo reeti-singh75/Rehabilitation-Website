@@ -372,7 +372,7 @@ body {
 /* SEARCH BAR - Overlay on Hero Background Image */
 .hero-image-search {
     position: absolute;
-    top: 160px;
+    top: 200px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
